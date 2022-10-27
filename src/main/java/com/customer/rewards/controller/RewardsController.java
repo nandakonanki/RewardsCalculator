@@ -1,7 +1,7 @@
-package com.rewards.rewards.controller;
+package com.customer.rewards.controller;
 
-import static com.rewards.rewards.constants.RewardsAPIConstants.STATUS_FAILED;
-import static com.rewards.rewards.constants.RewardsAPIConstants.STATUS_SUCCESS;
+import static com.customer.rewards.constants.RewardsAPIConstants.STATUS_FAILED;
+import static com.customer.rewards.constants.RewardsAPIConstants.STATUS_SUCCESS;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -13,11 +13,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.rewards.rewards.exception.RewardsAPINoDataException;
-import com.rewards.rewards.model.APIResponse;
-import com.rewards.rewards.model.CustomerRewardSummary;
-import com.rewards.rewards.model.Metadata;
-import com.rewards.rewards.service.RewardsService;
+import com.customer.rewards.exception.RewardsAPINoDataException;
+import com.customer.rewards.model.APIResponse;
+import com.customer.rewards.model.CustomerRewardSummary;
+import com.customer.rewards.model.Metadata;
+import com.customer.rewards.service.RewardsService;
 
 @RestController
 public class RewardsController {

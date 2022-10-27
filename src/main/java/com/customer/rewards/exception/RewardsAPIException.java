@@ -1,4 +1,4 @@
-package com.rewards.rewards.exception;
+package com.customer.rewards.exception;
 
 public class RewardsAPIException extends Exception {
 

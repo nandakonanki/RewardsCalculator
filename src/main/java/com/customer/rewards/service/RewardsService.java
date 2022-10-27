@@ -1,4 +1,4 @@
-package com.rewards.rewards.service;
+package com.customer.rewards.service;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -8,13 +8,14 @@ import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.rewards.rewards.constants.RewardsAPIConstants;
-import com.rewards.rewards.dao.CustomerRepository;
-import com.rewards.rewards.dao.TransactionRepository;
-import com.rewards.rewards.exception.RewardsAPINoDataException;
-import com.rewards.rewards.model.Customer;
-import com.rewards.rewards.model.CustomerRewardSummary;
-import com.rewards.rewards.model.Transaction;
+import com.customer.rewards.constants.RewardsAPIConstants;
+import com.customer.rewards.dao.CustomerRepository;
+import com.customer.rewards.dao.TransactionRepository;
+import com.customer.rewards.exception.RewardsAPINoDataException;
+import com.customer.rewards.model.Customer;
+import com.customer.rewards.model.CustomerRewardSummary;
+import com.customer.rewards.model.Transaction;
+
 
 @Service
 public class RewardsService {

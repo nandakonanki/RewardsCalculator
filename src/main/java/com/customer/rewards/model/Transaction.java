@@ -1,4 +1,4 @@
-package com.rewards.rewards.model;
+package com.customer.rewards.model;
 
 import java.time.LocalDateTime;
 

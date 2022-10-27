@@ -1,4 +1,4 @@
-package com.rewards.rewards.constants;
+package com.customer.rewards.constants;
 
 public interface RewardsAPIConstants {
 

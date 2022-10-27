@@ -1,4 +1,4 @@
-package com.rewards.rewards.dao;
+package com.customer.rewards.dao;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -6,7 +6,8 @@ import java.util.List;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-import com.rewards.rewards.model.Transaction;
+import com.customer.rewards.model.Transaction;
+
 
 @Repository
 public interface TransactionRepository extends CrudRepository<Transaction, Integer> {

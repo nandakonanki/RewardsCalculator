@@ -1,4 +1,4 @@
-package com.rewards.rewards.exception;
+package com.customer.rewards.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;

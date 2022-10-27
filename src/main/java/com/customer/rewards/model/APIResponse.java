@@ -1,4 +1,4 @@
-package com.rewards.rewards.model;
+package com.customer.rewards.model;
 
 public class APIResponse<T> {
 
