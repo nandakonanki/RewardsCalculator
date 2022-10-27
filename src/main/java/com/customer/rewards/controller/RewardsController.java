@@ -27,7 +27,8 @@ public class RewardsController {
 
 	private Logger logger = LoggerFactory.getLogger(RewardsController.class);
 
-	@RequestMapping(value = "/customer/{customerId}/rewards", produces = { "application/json" }, method = RequestMethod.GET)
+	@RequestMapping(value = "/customer/{customerId}/rewards", produces = {
+			"application/json" }, method = RequestMethod.GET)
 	public ResponseEntity<APIResponse<CustomerRewardSummary>> getRewardPoints(@PathVariable Integer customerId) {
 		APIResponse<CustomerRewardSummary> response = new APIResponse<>();
 		Metadata metadata = new Metadata();
@@ -41,6 +42,10 @@ public class RewardsController {
 			metadata.setDescription("Success");
 			response.setMetadata(metadata);
 		} catch (RewardsAPINoDataException e) {
+			metadata.setStatus(STATUS_FAILED);
+			metadata.setDescription(e.getMessage());
+			response.setMetadata(metadata);
+		} catch (Exception e) {
 			metadata.setStatus(STATUS_FAILED);
 			metadata.setDescription(e.getMessage());
 			response.setMetadata(metadata);
