@@ -29,7 +29,7 @@ public class RewardsService {
 	public CustomerRewardSummary getRewardPoints(Integer customerId) throws RewardsAPINoDataException {
 		Optional<Customer> customer = customerRepository.findById(customerId);
 		if (!customer.isPresent()) {
-			throw new RewardsAPINoDataException("User not found for the given Id", "99");
+			throw new RewardsAPINoDataException("User not found for the given Id : "+customerId, "99");
 		}
 
 		LocalDateTime lastMonthDate = getDateBasedOnOffSetDays(30);

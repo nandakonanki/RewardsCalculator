@@ -29,7 +29,10 @@ public class RewardsController {
 
 	@RequestMapping(value = "/customer/{customerId}/rewards", produces = {
 			"application/json" }, method = RequestMethod.GET)
-	public ResponseEntity<APIResponse<CustomerRewardSummary>> getRewardPoints(@PathVariable Integer customerId) {
+	public ResponseEntity<APIResponse<CustomerRewardSummary>> getRewardPoints(@PathVariable Integer customerId) throws RewardsAPINoDataException {
+		if (null == customerId) {
+			throw new RewardsAPINoDataException("CustomerId not found in the given Request", "98");
+		}
 		APIResponse<CustomerRewardSummary> response = new APIResponse<>();
 		Metadata metadata = new Metadata();
 		logger.info("Getting reward points for CustomerID : {}", customerId);
